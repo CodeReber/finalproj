@@ -8,10 +8,10 @@ import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 import Table1 from '../components/Table1'
 
-var data = [
-  {id: 1, name: 'Gob', value: '2'},
-  {id: 2, name: 'Buster', value: '5'},
-  {id: 3, name: 'George Michael', value: '4'}
+var data1 = [
+  {machine_name: 'xyz.com', assignedto: 'Jim', api1: 'Bad', ping_tool: 'Good', status: 'In_Progress', comment: 'Needs a new Cert' },
+  {machine_name: 'pug.com', assignedto: 'Jenny', api1: 'Good', ping_tool: 'Good', status: 'Complete', comment: 'Software Installed' },
+  {machine_name: 'xyz.com', assignedto: 'Joe', api1: 'Bad', ping_tool: 'Bad', status: 'In_Progress', comment: 'DMZ machine' }
 ];
 
 class Saved extends Component {
@@ -38,7 +38,6 @@ class Saved extends Component {
   };
 
 
-
   render() {
     return (
       <Container>
@@ -57,12 +56,12 @@ class Saved extends Component {
             <Card title="Table">
               <div className="App">
               <p className="Table-header">Basic Table</p>
-              <Table1 data={data}/>
+              <Table1 data={this.state.books}/>
               </div>
             </Card>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col size="md-12">
             <Card title="Saved Books" icon="download">
               {this.state.books.length ? (
@@ -70,12 +69,12 @@ class Saved extends Component {
                   {this.state.books.map(book => (
                     <Book
                       key={book._id}
-                      title={book.title}
-                      subtitle={book.subtitle}
-                      link={book.link}
-                      authors={book.authors.join(", ")}
-                      description={book.description}
-                      image={book.image}
+                      Machine_Name={book.machine_name}
+                      AssignedTo={book.assignedto}
+                      API1={book.api1}
+                      Ping_Tool={book.ping_tool}
+                      Status={book.status}
+                      Comment={book.comment}
                       Button={() => (
                         <button
                           onClick={() => this.handleBookDelete(book._id)}
@@ -92,7 +91,7 @@ class Saved extends Component {
               )}
             </Card>
           </Col>
-        </Row>
+        </Row> */}
         <Footer />
       </Container>
     );

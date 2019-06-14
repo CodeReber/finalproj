@@ -4,6 +4,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Book.find(req.query)
+      // .then(dbBook => {console.log(dbBook);return res.json(dbBook);})
       .then(dbBook => res.json(dbBook))
       .catch(err => res.status(422).json(err));
   },

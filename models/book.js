@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
-  title: { type: String, required: true },
-  subtitle: { type: String },
-  authors: { type: [String], required: true },
-  link: { type: String, required: true },
-  description: { type: String, required: true },
-  image: { type: String, required: true },
-  googleId: { type: String, required: true, unique: true }
+  id: { type: String, required: false },
+  machine_name: { type: String, required: true },
+  assignedto: { type: String, required: true },
+  api1: { type: String, required: true},
+  ping_tool: { type: String, required: true},
+  status: {type: String, required: true},
+  comment: {type: String, required: true}
 });
 
 const Book = mongoose.model("Book", bookSchema);
