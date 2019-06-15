@@ -8,6 +8,11 @@ module.exports = {
       .then(dbBook => res.json(dbBook))
       .catch(err => res.status(422).json(err));
   },
+  findByStatus: function(req,res){
+      db.Book.findByStatus(req.params.status)
+      .then(dbBook => {console.log(dbBook);return res.json(dbBook);})
+      .catch(err => res.status(422).json(err));
+  },
   findById: function(req, res) {
     db.Book.findById(req.params.id)
       .then(dbBook => res.json(dbBook))

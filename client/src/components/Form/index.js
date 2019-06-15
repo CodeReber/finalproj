@@ -5,14 +5,14 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
     <form>
       <div className="form-group">
         <label htmlFor="Query">
-          <strong>Book</strong>
+          <strong>Input List of Machines</strong>
         </label>
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="Ready Player One"
+          placeholder="Enter List Here"
           name="q"
           onChange={handleInputChange}
           required
@@ -24,7 +24,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
           type="submit"
           className="btn btn-lg btn-danger float-right"
         >
-          Search
+          Submit
         </button>
       </div>
     </form>

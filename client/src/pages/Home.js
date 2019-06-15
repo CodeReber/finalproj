@@ -69,6 +69,22 @@ class Home extends Component {
             </Jumbotron>
           </Col>
           <Col size="md-12">
+            <Card title="Add Sources Machines">
+              <Form
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                q={this.state.q}
+              />
+            </Card>
+            <Card title="Add People to assign to Machines">
+              <Form
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                q={this.state.q}
+              />
+            </Card>
+          </Col>
+          <Col size="md-12">
             <Card title="Book Search" icon="far fa-book">
               <Form
                 handleInputChange={this.handleInputChange}
